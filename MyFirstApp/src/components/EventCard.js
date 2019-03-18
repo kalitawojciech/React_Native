@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
          textAlign: 'center',
          paddingTop: 0
      }  
-})
+});
 
 export default function EventCard({ event }) {
     const {
