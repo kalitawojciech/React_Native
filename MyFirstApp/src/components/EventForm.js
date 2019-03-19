@@ -2,6 +2,8 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { View, Text, TouchableHighlight, TextInput, StyleSheet } from 'react-native';
+import DateTimePicker from 'react-native-modal-datetime-picker';
+import { formatDate } from '../../api';
 
 const styles = StyleSheet.create({
     fieldContainer: {
