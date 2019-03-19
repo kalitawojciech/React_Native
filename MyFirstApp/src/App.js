@@ -1,12 +1,29 @@
 import React from 'react';
 import EventList from './components/EventList';
+import EventForm from './components/EventForm';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { YellowBox } from 'react-native';
 
-// eslint-disable-next-line react/prefer-stateless-function
-export default class App extends React.Component {
-    // eslint-disable-next-line class-methods-use-this
-    render() {
-        return (
-            <EventList />
-        );
+YellowBox.ignoreWarnings([
+    'Warning: componentWillMount is deprecated',
+    'Warning: componentWillReceiveProps is deprecated'
+])
+
+const navigate = createStackNavigator({
+    list: {
+        screen: EventList,
+        navigationOptions: () => ({
+            title: 'Your events',
+        }),
+    },
+    form: {
+        screen: EventForm,
+        navigationOptions: () => ({
+            title: 'Add an event',
+        }),
     }
-}
+});
+
+const App = createAppContainer(navigate);
+
+export default App;

@@ -5,7 +5,7 @@ import { View, Text, TouchableHighlight } from 'react-native';
 
 class EventForm extends Component {
     handleAddPress = () => {
-        // ?
+        this.props.navigation.navigate('list');
     }
     render() {
         return(
