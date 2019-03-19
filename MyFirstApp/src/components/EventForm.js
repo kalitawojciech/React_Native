@@ -15,6 +15,20 @@ const styles = StyleSheet.create({
         marginRight: 7,
         paddingLeft: 10,
 
+    },
+    button: {
+        height: 50,
+        backgroundColor: '#48bbec',
+        borderColor: '#48bbec',
+        alignSelf: 'stretch',
+        margin: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 5
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 18
     }
 });
 
@@ -46,8 +60,9 @@ class EventForm extends Component {
                 </View>
                 <TouchableHighlight
                 onPress={this.handleAddPress}
+                style={styles.button}
                 >
-                    <Text>Add</Text>
+                    <Text style={styles.buttonText}>Add</Text>
                 </TouchableHighlight>
             </View>
         );
