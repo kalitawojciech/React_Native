@@ -28,6 +28,10 @@ class EventForm extends Component {
         this.props.navigation.navigate('list');
     }
 
+    handleChangeTitle = (value) => {
+        this.setState({ title: value});
+    }
+
     render() {
         return(
             <View style={{ flex: 1}}>
@@ -37,6 +41,7 @@ class EventForm extends Component {
                     placeholder='Event title' 
                     spellCheck={false}
                     value={this.state.title}
+                    onChangeText={this.handleChangeTitle}
                     />
                 </View>
                 <TouchableHighlight
