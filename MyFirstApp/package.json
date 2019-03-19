@@ -13,6 +13,7 @@
     "react-native": "0.59.1",
     "react-native-action-button": "^2.8.5",
     "react-native-gesture-handler": "^1.1.0",
+    "react-native-modal-datetime-picker": "^6.1.0",
     "react-navigation": "^3.4.1"
   },
   "devDependencies": {
