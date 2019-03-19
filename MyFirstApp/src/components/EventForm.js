@@ -19,14 +19,25 @@ const styles = StyleSheet.create({
 });
 
 class EventForm extends Component {
+    state = {
+        title: null,
+        date: ''
+    }
+
     handleAddPress = () => {
         this.props.navigation.navigate('list');
     }
+
     render() {
         return(
             <View style={{ flex: 1}}>
                 <View style={styles.fieldContainer}>
-                    <TextInput style={styles.text} placeholder='Event title' spellCheck={false}/>
+                    <TextInput 
+                    style={styles.text} 
+                    placeholder='Event title' 
+                    spellCheck={false}
+                    value={this.state.title}
+                    />
                 </View>
                 <TouchableHighlight
                 onPress={this.handleAddPress}
