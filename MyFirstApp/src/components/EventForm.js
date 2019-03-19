@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#fff',
         fontSize: 18
+    },
+    borderTop: {
+        borderColor: '#edeeef',
+        borderTopWidth: 0.5
     }
 });
 
@@ -53,11 +57,14 @@ class EventForm extends Component {
             <View style={{ flex: 1}}>
                 <View style={styles.fieldContainer}>
                     <TextInput 
-                    style={styles.text} 
-                    placeholder='Event title' 
-                    spellCheck={false}
-                    value={this.state.title}
-                    onChangeText={this.handleChangeTitle}
+                        style={styles.text} 
+                        placeholder='Event title' 
+                        spellCheck={false}
+                        value={this.state.title}
+                        onChangeText={this.handleChangeTitle}
+                    />
+                    <TextInput 
+                        style={[styles.text, styles.borderTop]}
                     />
                 </View>
                 <TouchableHighlight
